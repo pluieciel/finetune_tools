@@ -435,8 +435,8 @@ class PrettyPrinter:
                         f.write(txt)
                         f.close()
                     else:
-                        for tt in sublist:
-                            f = open(outpath+"pos/p_"+args.input.name[args.input.name.rfind('/')+1:]+"_"+str(i)+".txt",'wb')
+                        for j,tt in enumerate(sublist):
+                            f = open(outpath+"pos/p_"+args.input.name[args.input.name.rfind('/')+1:]+"_"+str(i)+"_"+str(j)+".txt",'wb')
                             txt=re.sub(r'\n',' ', tt).strip().encode('utf8')
                             highlight_list.append(txt)
                             f.write(txt)
@@ -455,8 +455,8 @@ class PrettyPrinter:
                         f.write(txt)
                         f.close()
                     else:
-                        for tt in sublist:
-                            f = open(outpath+"neg/n_"+args.input.name[args.input.name.rfind('/')+1:]+"_"+str(i)+".txt",'wb')
+                        for j,tt in enumerate(sublist):
+                            f = open(outpath+"neg/n_"+args.input.name[args.input.name.rfind('/')+1:]+"_"+str(i)+"_"+str(j)+".txt",'wb')
                             txt=re.sub(r'\n',' ', tt).strip().encode('utf8')
                             highlight_list.append(txt)
                             f.write(txt)
@@ -475,8 +475,8 @@ class PrettyPrinter:
                         f.write(txt)
                         f.close()
                     else:
-                        for tt in sublist:
-                            f = open(outpath+"yellow/y_"+args.input.name[args.input.name.rfind('/')+1:]+"_"+str(i)+".txt",'wb')
+                        for j,tt in enumerate(sublist):
+                            f = open(outpath+"yellow/y_"+args.input.name[args.input.name.rfind('/')+1:]+"_"+str(i)+"_"+str(j)+".txt",'wb')
                             txt=re.sub(r'\n',' ', tt).strip().encode('utf8')
                             highlight_list.append(txt)
                             f.write(txt)
